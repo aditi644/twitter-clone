@@ -8,7 +8,7 @@ export const signup = async (req, res) => {
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)){
-            return req.status(400).json({error: "Invalid email format"});
+            return res.status(400).json({error: "Invalid email format"});
         }
 
         const existingUser = await User.findOne({username});
@@ -95,7 +95,7 @@ export const logout = async (req, res) => {
         res.cookie("jwt","",{maxAge:0})
         res.status(200).json({message:"Logged out successfully"})
     } catch (error) {
-        console.log("Error in login controller", error.message);
+        console.log("Error in logout controller", error.message);
         res.status(500).json({error: "Internal server error"});
     }
 }
