@@ -94,10 +94,12 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 Here are some screenshots of the application:
 
 ### Homepage
-![Homepage Screenshot](relative/path/to/homepage-screenshot.png)
+![Homepage Screenshot](https://github.com/user-attachments/assets/1eff319f-66c1-4d58-b6d5-4e393f7100d2)
 
 ### User Profile
-![Profile Screenshot](relative/path/to/profile-screenshot.png)
+![Profile Screenshot](https://github.com/user-attachments/assets/4183513c-ddeb-4a61-b180-e054a1db1f69)
+)
+)
 
 ## Deployed Application
 
