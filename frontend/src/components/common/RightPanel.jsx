@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import RightPanelSkeleton from "../skeletons/RightPanelSkeleton";
-import { USERS_FOR_RIGHT_PANEL } from "../../utils/db/dummy";
 import { useQuery } from "@tanstack/react-query";
+
 import useFollow from "../../hooks/useFollow";
+
+import RightPanelSkeleton from "../skeletons/RightPanelSkeleton";
 import LoadingSpinner from "./LoadingSpinner";
 
 const RightPanel = () => {
@@ -41,7 +42,7 @@ const RightPanel = () => {
 						</>
 					)}
 					{!isLoading &&
-						USERS_FOR_RIGHT_PANEL?.map((user) => (
+						suggestedUsers?.map((user) => (
 							<Link
 								to={`/profile/${user.username}`}
 								className='flex items-center justify-between gap-4'
@@ -68,7 +69,7 @@ const RightPanel = () => {
 											follow(user._id);
 										}}
 									>
-										{isPending ? <LoadingSpinner size="sm"/> : "Follow"}
+										{isPending ? <LoadingSpinner size='sm' /> : "Follow"}
 									</button>
 								</div>
 							</Link>
